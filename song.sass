@@ -1,0 +1,298 @@
+$first_color: red
+
+
+
+.filterDiv
+    display: none
+
+.show
+    display: block
+
+
+ul.nav li a.abs
+    color: rgb(0, 132, 255)
+    font-size: 18px
+    font-family: Monospace
+    &:hover
+        color: dodgerblue
+        background-color: none
+
+    
+@keyframes swing
+    0%, 100% 
+        transform: rotate(-30deg)
+    20% 
+        transform: scale(.95)
+    50% 
+        transform: rotate(30deg)
+    80% 
+        transform: scale(.95)
+
+#sweetlandia
+    animation: swing 2s infinite ease-in-out
+
+.event
+    margin: 50px auto
+    text-align: center
+
+.song
+    font-size: 25px
+.song span.play
+    color: #58D68D
+    &:hover
+        color: blue
+
+.song span.pause
+    color: #ECF0F1
+    &:hover
+        color: blue
+
+.song span.stop
+    color: #EC7063
+    &:hover
+        color: yellow
+
+.tit
+    &:hover
+        color: rgb(241, 42, 182)
+        text-decoration: none
+        &:active
+            color: red
+            
+.imgs
+    margin-top: 50px
+    width: 700px
+    height: 300px
+
+.imgss
+    width: 250px
+    height: 400px
+    border-radius: 10px
+    box-shadow: 3px 5px 8px 5px #5D6D7E
+    
+
+.jumbotrons
+    background-image: url("http://24.media.tumblr.com/16ef6c5b94c6fd636184826901f8816e/tumblr_n6nl51h5GX1tcbegio1_500.gif")
+    margin-top: -50px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+
+.panel-body
+    background-image: url("https://i.pinimg.com/originals/7d/b6/a5/7db6a534485b92e268643a18bd2326b9.gif")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    border: 5px dotted #27FF00
+    box-shadow: 3px 5px 8px 5px #F000FF
+.jumbotron
+    padding-top: 16px
+    padding-bottom: 16px
+    margin-bottom: 16px
+    border-bottom: 1px solid #dae2e4
+    color: inherit
+    background-color: #f4f6f8
+    box-shadow: 3px 5px 8px 2px #C4C4C4
+    background-image: url("https://data.whicdn.com/images/281356644/original.gif")
+
+.label, .genres li
+    font-weight: bold
+    display: inline-block
+    margin-bottom: 5px
+    padding: 4px 8px
+    line-height: 1
+    border: 0
+    border-radius: 6px
+    font-size: 12px
+    transition: 0.1s all
+    -webkit-font-smoothing: antialiased
+
+.label-default, .genres li
+    background-color: #e4e7ec
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7)
+    color: #90939a
+    &:hover
+        background-color: #90939a
+        color: #f4f6f8
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2)
+
+.alphabet
+    cursor: pointer
+    font-size: 20px
+    text-align: center
+    & li
+        display: inline-block
+        padding-left: 2px
+        padding-right: 2px
+        &:hover
+            color: #1d7cf4
+
+.genres
+    cursor: pointer
+    & li
+        margin-right: 5px
+        margin-left: 2px
+        &:active
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25)
+
+
+
+.alphabets
+    display: flex
+    margin: 0
+    padding: 0
+    text-align: center
+    justify-content: center
+    align-items: center
+    position: relative
+    font-family: sans-serif
+    text-transform: uppercase
+    font-size: 2em
+    font-weight: bolder
+    letter-spacing: 3px
+    overflow: hidden
+    background: linear-gradient(90deg, red, rgb(107, 200, 243), #000)
+    background-repeat: no-repeat
+    background-size: 80%
+    animation: animate 5s linear infinite
+    -webkit-background-clip: text
+    -webkit-text-fill-color: rgba(255, 255, 255, 0)
+
+@keyframes animate
+    0%
+        background-position: -500%
+    100%
+        background-position: 500%
+
+    
+.nav
+    transition: all 300ms ease-in-out
+    background: dodgerblue
+    transform: scaleX(0)
+    cursor:pointer
+
+.nav.open
+    transform: scaleX(1)
+    border-radius: 100px
+
+.nav ul
+    padding: 0
+    margin: 0
+
+.nav li
+    display: inline-block
+    color: rgb(255, 255, 255)
+    font-size: 18px
+    font-weight: bolder
+    font-family: sans-serif
+    padding: 15px
+    cursor:pointer
+    &:hover
+        background-color: rgb(122, 184, 247)
+
+.navicon
+    width: 40px
+    height: 40px
+    position: relative
+    top: -48px
+    background: #F1C40F
+    border-radius: 100%
+    transition: 300ms all ease-in-out
+    cursor:pointer
+    &:hover
+        background: #E74C3C
+
+.navicon.open .bar:first-child
+    transform: rotate(45deg)
+    top: 22px
+.navicon.open .bar:last-child
+    transform: rotate(-45deg)
+    top: 12px
+.navicon.open .bar.middle
+    opacity: 0
+
+.navicon.open
+    top: -54px
+
+.navicon .bar
+    background: #3D7788
+    width: 30px
+    height: 5px
+    border-radius: 20px
+    position: relative
+    top: 4px
+    transition: 300ms all ease-in-out
+
+.navicon .bar.first
+    top: 6px
+
+.fixed
+    position: fixed
+    top: 0px
+    left: 0px
+    right: 0px
+    margin: 0px
+
+.navicon .bar.last
+    top: 8px
+.navicon .bar.first
+    top: 27px
+.content
+    margin-top: 220px
+    color: #eee
+    font-family: sans-serif
+
+.navicon.open-top
+    top: 104px !important
+
+.navicon.open-top .bar.middle
+    opacity: 1
+    transform: rotate(90deg)
+    top: 16px
+
+.navicon.open-top .bar.first
+    width: 15px
+    top: 12px
+    left: 4px
+    transform: rotate(45deg)
+
+.navicon.open-top .bar.last
+    width: 15px
+    top: 2px
+    left: -4px
+    transform: rotate(-45deg)
+
+.search
+    color: #4f4f4f
+    font-weight: 300
+    font-size: 1.5em
+    padding: 7px
+    margin-top: -50px
+    border: 0
+    background-color: transparent
+    outline: none
+    -webkit-appearance: none
+    &:focus
+        -webkit-transition: all .4s ease
+        transition: all .4s ease
+
+.serches
+    margin-top: -15px
+
+.panel-default > .panel-heading
+    color: #444
+    border-color: #cfd9db
+    font-weight: bold
+    font-size: 85%
+    text-transform: uppercase
+    background-color: #f6f6f6
+    
+button
+    background: none
+    border: none
+
+/*@-webkit-keyframes bounce
+    100%
+        top: -20px*/
+        
